@@ -1,0 +1,16 @@
+@import './base.css';
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 960px;
+  /* border: pink solid 2px; */
+  margin: 0 auto;
+}
+
+.wrapper2 {
+  width: 960px;
+  /* border: pink solid 2px; */
+}
