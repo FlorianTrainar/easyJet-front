@@ -62,4 +62,21 @@ footer p {
   margin: 5px 0px;
   font-size: 13px;
 }
+
+/* --- */
+
+@media (max-width: 670px) {
+  footer section {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+  footer h3 {
+    margin: 10px;
+  }
+  footer p {
+    visibility: hidden;
+    position: absolute;
+  }
+}
 </style>

@@ -113,31 +113,31 @@ import CoverPart from '@/components/CoverPart.vue'
       <div>
         <div>
           <h4>Questions fréquentes</h4>
-          <i class="fa-regular fa-circle-question"></i>
+          <font-awesome-icon :icon="['far', 'question-circle']" />
         </div>
         <div>
           <h4>Bagages</h4>
-          <i class="fa-solid fa-suitcase"></i>
+          <font-awesome-icon :icon="['fas', 'suitcase']" />
         </div>
         <div>
           <h4>Retards et annulations</h4>
-          <i class="fa-regular fa-clock"></i>
+          <font-awesome-icon :icon="['far', 'clock']" />
         </div>
         <div>
           <h4>S'enregistrer en ligne</h4>
-          <i class="fa-solid fa-mobile-screen"></i>
+          <font-awesome-icon :icon="['fas', 'mobile-alt']" />
         </div>
         <div>
           <h4>Effectuer un changement</h4>
-          <i class="fa-solid fa-pen"></i>
+          <font-awesome-icon :icon="['fas', 'pen']" />
         </div>
         <div>
           <h4>Protection contre la restriction de voyage</h4>
-          <i class="fa-solid fa-user-shield"></i>
+          <font-awesome-icon :icon="['fas', 'user-shield']" />
         </div>
         <div>
           <h4>Contactez-nous</h4>
-          <i class="fa-solid fa-walkie-talkie"></i>
+          <font-awesome-icon :icon="['fas', 'phone']" />
         </div>
       </div>
     </section>
@@ -330,11 +330,12 @@ p {
   flex-direction: column;
   justify-content: space-between;
 }
-.slide-box > div > div > i {
+.slide-box > div > div > svg {
   color: white;
   align-self: center;
   padding-bottom: 30px;
-  font-size: 40px;
+  font-size: 75px;
+  font-weight: normal;
 }
 .slide-box div h4 {
   /* border: white solid 1px; */
@@ -346,4 +347,65 @@ p {
 }
 
 /* ----------------------------------- */
+
+@media (max-width: 960px) {
+  .sec-default {
+    flex-direction: column;
+  }
+  .sec-default div h2 {
+    margin: 10px 0;
+  }
+
+  .sec-default div button {
+    margin-bottom: 15px;
+  }
+
+  .sec3 {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .sec3 div:first-of-type,
+  .sec3 div:nth-last-of-type(2) {
+    width: 48%;
+  }
+  .sec3 div:last-of-type {
+    margin-top: 25px;
+    width: 100%;
+  }
+}
+
+/* --- */
+
+@media (max-width: 670px) {
+  .sec-default {
+    width: 300px;
+  }
+  .sec-default img {
+    height: 20%;
+  }
+
+  .carrousel {
+    display: flex;
+    overflow: scroll;
+  }
+
+  .carrousel-element {
+    width: 48%;
+  }
+
+  /* .... */
+
+  .sec3 {
+    flex-wrap: nowrap;
+    overflow: scroll;
+  }
+  .sec3 div:first-of-type,
+  .sec3 div:nth-of-type(2),
+  .sec3 div:last-of-type {
+    width: 49%;
+    margin-top: 0px;
+    flex-shrink: 0;
+  }
+}
 </style>

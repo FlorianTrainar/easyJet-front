@@ -16,7 +16,7 @@ import ReservationForm from './ReservationForm.vue'
             Recommencer.
           </h1>
           <p>
-            Cet été, détendez-vous à la plage : Baléares, Sardaigne, Sicile... Vous avez le choix !
+            Cete été, détendez-vous à la plage : Baléares, Sardaigne, Sicile... Vous avez le choix !
           </p>
           <div>
             <p>à partir de</p>
@@ -108,13 +108,9 @@ import ReservationForm from './ReservationForm.vue'
   color: white;
 }
 
-.cover-ad h1 {
-  font-size: 40px;
-  font-family: easyJet Headline;
-}
 .cover-ad p {
   font-size: 18px;
-  font-family: easyJet Rounded Book;
+  font-family: 'easyJet Rounded Book';
 }
 .cover-ad div p {
   font-size: 12px;
@@ -127,7 +123,7 @@ import ReservationForm from './ReservationForm.vue'
   background-color: #f76601;
   color: white;
   border: none;
-  width: 75%;
+  width: 80%;
   padding: 12px 0px;
 }
 
@@ -175,5 +171,39 @@ import ReservationForm from './ReservationForm.vue'
 .foot-ad-buttom {
   flex: 1;
   line-height: 30px;
+}
+
+/* --- */
+
+@media (max-width: 1115px) {
+  .foot-ad div:last-child {
+    position: absolute;
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 670px) {
+  .cover {
+    background-color: #d3d3d3;
+    justify-content: center;
+    width: 100wv;
+  }
+
+  .cover img {
+    visibility: hidden;
+    /* height: 670px; */
+  }
+  .cover-ad {
+    visibility: hidden;
+    position: absolute;
+  }
+  .cover-form {
+    margin: 0 auto;
+  }
+
+  .foot-ad div:nth-child(3) {
+    visibility: hidden;
+    position: absolute;
+  }
 }
 </style>

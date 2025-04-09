@@ -2,7 +2,7 @@
 <template>
   <header>
     <nav>
-      <i class="fa-solid fa-bars"></i>
+      <font-awesome-icon :icon="['fas', 'bars']" />
       <img src="../assets/imgs/ej-title.png" alt="EasyJet" />
       <a href="">Infos de vol</a>
       <a href="">Voitures/Autres services</a>
@@ -12,9 +12,11 @@
     </nav>
     <nav>
       <button>S'enregistrer</button>
-      <a href="" id="connect-button"><i class="fa-regular fa-circle-user"></i>Se connecter</a>
-      <a href="">Aide</a>
-      <a href="">fr-FR</a>
+      <button id="connect-button">
+        <font-awesome-icon :icon="['far', 'user-circle']" /> Se connecter
+      </button>
+      <button>Aide</button>
+      <button>fr-FR</button>
       <img src="../assets/imgs/drapeau.png" alt="FR" />
     </nav>
   </header>
@@ -31,6 +33,7 @@ header {
   box-shadow: 0 0 10px black;
   position: relative;
   z-index: 10;
+  font-family: 'easyJet Rounded Book';
 }
 
 header nav {
@@ -43,24 +46,32 @@ header a {
   text-decoration: none;
   color: white;
 }
-header i {
-  color: white;
+header svg {
   font-size: 25px;
   position: absolute;
   visibility: hidden;
 }
+nav > svg:first-of-type {
+  color: white;
+}
 
 header button {
-  color: #f77b02;
+  color: white;
+  background-color: #f77d0200;
   border: none;
-  padding: 5px 5px;
+  padding: 10px 5px;
   border-radius: 2px;
+}
+header button:hover {
+  color: #f77b02;
+  background-color: white;
+  cursor: pointer;
 }
 
 /* ---- */
 
 @media (max-width: 1115px) {
-  header > nav:first-child > i {
+  header > nav:first-child > svg {
     visibility: visible;
     position: relative;
   }
@@ -79,14 +90,13 @@ header button {
   }
   #connect-button {
     display: flex;
-    flex-direction: column;
-    gap: 2px;
+    gap: 8px;
     align-items: center;
     font-size: 20px;
     visibility: visible;
     position: relative;
   }
-  #connect-button i {
+  #connect-button svg {
     visibility: visible;
     position: relative;
     font-size: 22px;

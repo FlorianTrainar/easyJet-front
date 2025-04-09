@@ -1,5 +1,15 @@
 @import './base.css';
 
+@font-face {
+  font-family: 'easyJet Rounded Book';
+  src: url(../assets/fonts/easyJetRoundedBook.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'easyJet Headline';
+  src: url(../assets/fonts/easyJetHeadline.woff) format('woff');
+}
+
 * {
   box-sizing: border-box;
 }
@@ -13,4 +23,34 @@
 .wrapper2 {
   width: 960px;
   /* border: pink solid 2px; */
+}
+
+h1 {
+  font-size: 40px;
+  font-family: 'easyJet Headline';
+}
+
+button,
+p {
+  font-family: 'easyJet Rounded Book';
+  font-size: 14px;
+}
+
+@media (max-width: 960px) {
+  .wrapper {
+    width: 670px;
+  }
+
+  .wrapper2 {
+    width: 98vw;
+  }
+}
+
+@media (max-width: 670px) {
+  .wrapper {
+    width: 90vw;
+  }
+  .wrapper2 {
+    width: 95vw;
+  }
 }

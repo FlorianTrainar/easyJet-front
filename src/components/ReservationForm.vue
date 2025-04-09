@@ -12,36 +12,49 @@
         <label for="checkbox">Aller simple</label>
       </section>
 
-      <section class="destination">
+      <div class="destination">
         <div>
-          <label for="">De : <input type="text" /></label>
+          <label for=""
+            >De : <input type="text" /><font-awesome-icon :icon="['fas', 'list']"
+          /></label>
         </div>
         <div class="grey-line"></div>
         <div>
-          <label for="">A : <input type="text" /></label>
+          <label for=""
+            >A : <input type="text" /><font-awesome-icon :icon="['fas', 'list']"
+          /></label>
         </div>
-      </section>
+      </div>
 
-      <section class="date">
-        <p>Aller</p>
+      <div class="date">
+        <p><font-awesome-icon :icon="['far', 'calendar']" /> Aller</p>
         <div class="grey-line"></div>
-        <p>Retour</p>
-      </section>
+        <p><font-awesome-icon :icon="['far', 'calendar']" /> Retour</p>
+      </div>
 
-      <section class="adultes-enfants">
+      <div class="adultes-enfants">
         <div>
           <label for="">Adultes (16+) </label>
-          <div><button>-</button> <span>2</span> <button>+</button></div>
+          <div>
+            <button><font-awesome-icon :icon="['fas', 'minus']" /></button> <span>2</span>
+            <button><font-awesome-icon :icon="['fas', 'plus']" /></button>
+          </div>
         </div>
         <div>
           <label for="">Enfants (2-15)</label>
-          <div><button>-</button> <span>0</span> <button>+</button></div>
+          <div>
+            <button><font-awesome-icon :icon="['fas', 'minus']" /></button> <span>4</span>
+            <button><font-awesome-icon :icon="['fas', 'plus']" /></button>
+          </div>
         </div>
         <div>
           <label for="">Bébés (- 2) </label>
-          <div><button>-</button> <span>0</span> <button>+</button></div>
+          <div>
+            <button><font-awesome-icon :icon="['fas', 'minus']" /></button> <span>0</span>
+            <button><font-awesome-icon :icon="['fas', 'plus']" /></button>
+          </div>
         </div>
-      </section>
+      </div>
 
       <section class="vols">
         <button>Afficher les vols ></button>
@@ -55,6 +68,10 @@
   </section>
 </template>
 <style scoped>
+.main {
+  font-family: 'easyJet Rounded Book';
+}
+
 .cover-form {
   font-size: 14px;
   font-family: easyJet Rounded Book;
@@ -74,7 +91,6 @@
   display: flex;
   justify-content: space-between;
   line-height: 30px;
-  /* margin-bottom: 10px; */
 }
 
 .tabs p {
@@ -115,12 +131,11 @@
   position: relative;
 }
 
-.destination i {
-  font-size: 23px;
+.destination svg {
+  font-size: 24px;
   position: absolute;
   color: #f76601;
   right: -34px;
-  line-height: 14px;
 }
 
 .destination input {
@@ -148,7 +163,7 @@
   color: #f76601;
 }
 
-.date i {
+.date svg {
   font-size: 16px;
 }
 
